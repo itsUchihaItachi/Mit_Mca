@@ -19,7 +19,7 @@ public class DashboardBottomGrid extends AppCompatActivity {
         String[] myItems = {"Html/css","something","something"};
         ArrayAdapter<String> adapter =new ArrayAdapter<String>(this, R.layout.list_layout,myItems);
         ListView myFirstListView = (ListView) findViewById(id.ListView);
-    myFirstListView.setAdapter(adapter);
+        myFirstListView.setAdapter(adapter);
 
 
     }
