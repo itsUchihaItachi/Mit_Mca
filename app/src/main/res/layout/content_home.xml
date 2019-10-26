@@ -55,7 +55,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/ic_menu_gallery"/>
+                android:background="@drawable/icons8News"/>
 
             <Button
                 android:id="@+id/option2"
@@ -69,7 +69,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/ic_menu_gallery"/>
+                android:background="@drawable/icons8Calendar"/>
 
             <Button
                 android:id="@+id/option4"
@@ -104,14 +104,14 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/ic_menu_gallery"/>
+                android:background="@drawable/icons8People"/>
 
             <Button
                 android:id="@+id/option9"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/ic_menu_gallery"/>
+                android:background="@drawable/icons8Link"/>
 
 
         </GridLayout>
