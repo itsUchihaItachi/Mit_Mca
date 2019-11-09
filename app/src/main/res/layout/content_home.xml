@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/app_bar_main">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
 
@@ -21,6 +18,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -28,97 +29,106 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:orientation="vertical"
         android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
-        <GridLayout
-            android:id="@+id/gridLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:columnCount="3"
-            android:rowCount="3"
-            app:layout_constraintBottom_toBottomOf="@id/linearLayout"
-            app:layout_constraintEnd_toEndOf="@id/linearLayout"
-            app:layout_constraintStart_toStartOf="@id/linearLayout"
-            app:layout_constraintTop_toTopOf="@id/linearLayout">
+<!--        <GridLayout-->
+<!--            android:id="@+id/gridLayout"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:columnCount="3"-->
+<!--            android:rowCount="3"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/linearLayout"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/linearLayout"-->
+<!--            app:layout_constraintStart_toStartOf="@id/linearLayout"-->
+<!--            app:layout_constraintTop_toTopOf="@id/linearLayout">-->
 
-            <Button
-                android:id="@+id/option1"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/icons8News"/>
+<!--            <LinearLayout-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
 
-            <Button
-                android:id="@+id/option2"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/ic_menu_gallery"/>
+<!--                <Button-->
+<!--                    android:id="@+id/option1"-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="100dp"-->
+<!--                    android:background="@drawable/icons8news" />-->
 
-            <Button
-                android:id="@+id/option3"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/icons8Calendar"/>
-
-            <Button
-                android:id="@+id/option4"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/ic_menu_gallery"/>
-
-            <Button
-                android:id="@+id/option5"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/ic_menu_gallery"/>
-
-            <Button
-                android:id="@+id/option6"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/ic_menu_gallery"/>
-
-            <Button
-                android:id="@+id/option7"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/ic_menu_gallery"/>
-
-            <Button
-                android:id="@+id/option8"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/icons8People"/>
-
-            <Button
-                android:id="@+id/option9"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/icons8Link"/>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Label1" />-->
+<!--            </LinearLayout>-->
 
 
-        </GridLayout>
+<!--            <Button-->
+<!--                android:id="@+id/option2"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@drawable/ic_menu_gallery" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/option3"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@drawable/icons8calendar" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/option4"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@drawable/ic_menu_gallery" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/option5"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@drawable/ic_menu_gallery" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/option6"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@drawable/ic_menu_gallery" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/option7"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@drawable/ic_menu_gallery" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/option8"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@drawable/icons8people" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/option9"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@drawable/icons8link" />-->
+
+
+<!--        </GridLayout>-->
 
     </androidx.appcompat.widget.LinearLayoutCompat>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
