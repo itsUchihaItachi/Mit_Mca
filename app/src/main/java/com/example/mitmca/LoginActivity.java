@@ -1,46 +1,48 @@
 package com.example.mitmca;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class LoginActivity extends AppCompatActivity {
-    //myDB=new DatabaseHelper(this);
-    // DatabaseHelper myDB;
+     DatabaseHelper myDB;
     EditText username;
     EditText password;
     FloatingActionButton floatingAction;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        username= findViewById(R.id.erpEditText);
-        password= findViewById(R.id.passwordEditText);
+        myDB=new DatabaseHelper(this);
+        username = findViewById(R.id.erpEditText);
+        password = findViewById(R.id.passwordEditText);
         floatingAction = findViewById(R.id.floatingActionButton);
 
         floatingAction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validate();
+                String email = username.getText().toString();
+                String pass = password.getText().toString();
+                myDB.insert();
+                Boolean checkEmailPass = myDB.checkEmail(email, pass);
+                if (checkEmailPass == true) {
+                    Toast.makeText(getApplicationContext(), "Successful login", Toast.LENGTH_SHORT).show();
+                    Intent intent= new Intent(v.getContext(),HomeActivity.class);
+                    startActivity(intent);
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Login failed", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
+        }
     }
 
-    void validate()
-    {
-       String u= username.getText().toString();
-       String p= password.getText().toString();
-       if(u=="sanket" && p=="password")
-       {
-           Toast t=Toast.makeText(this,"Login successful",Toast.LENGTH_LONG);
-       }
-
-    }
-
-}

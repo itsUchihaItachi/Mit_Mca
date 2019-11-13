@@ -18,9 +18,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.Menu;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -45,13 +47,33 @@ public class HomeActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
-                R.id.nav_tools, R.id.nav_share, R.id.nav_send)
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+               // , R.id.nav_tools, R.id.nav_share, R.id.nav_send
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        setupRecyclerView();
+    }
+
+    private void setupRecyclerView(){
+        ArrayList<DataItem> dataList = new ArrayList<>();
+        dataList.add(new DataItem(R.drawable.news, "News/Events"));
+        dataList.add(new DataItem(R.drawable.maps, "Map"));
+        dataList.add(new DataItem(R.drawable.calendar, "Calendar"));
+        dataList.add(new DataItem(R.drawable.timetable, "TimeTable"));
+        dataList.add(new DataItem(R.drawable.questionpaper, "Question Paper"));
+        dataList.add(new DataItem(R.drawable.contact, "Contact"));
+        dataList.add(new DataItem(R.drawable.qr, "QR"));
+        dataList.add(new DataItem(R.drawable.forum, "Forum"));
+        dataList.add(new DataItem(R.drawable.links, "Links"));
+
+        RecyclerView rv = findViewById(R.id.recycler_view);
+        RecyclerDataAdapter adapter = new RecyclerDataAdapter(dataList);
+        rv.setAdapter(adapter);
+        rv.setLayoutManager(new GridLayoutManager(this, 3));
     }
 
  /*   @Override

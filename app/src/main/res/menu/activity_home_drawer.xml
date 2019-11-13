@@ -5,24 +5,40 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/icons8people"
-            android:title="@string/menu_home" />
+            android:id="@+id/nav_news"
+            android:icon="@drawable/news"
+            android:title="@string/menu_news_events" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_maps"
+            android:icon="@drawable/maps"
+            android:title="@string/menu_maps" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/calendar"
+            android:title="@string/menu_calendar" />
         <item
-            android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menu_tools" />
+            android:id="@+id/nav_qtspaper"
+            android:icon="@drawable/questionpaper"
+            android:title="@string/menu_qtspaper" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/contact"
+            android:title="@string/menu_contact" />
+        <item
+            android:id="@+id/nav_qr"
+            android:icon="@drawable/qr"
+            android:title="@string/menu_qr" />
+        <item
+            android:id="@+id/nav_forums"
+            android:icon="@drawable/forum"
+            android:title="@string/menu_forums" />
+        <item
+            android:id="@+id/nav_links"
+            android:icon="@drawable/links"
+            android:title="@string/menu_links" />
     </group>
 
-    <item android:title="Communicate">
+  <!--  <item android:title="Communicate">
         <menu>
             <item
                 android:id="@+id/nav_share"
@@ -34,5 +50,5 @@
                 android:title="@string/menu_send" />
         </menu>
     </item>
-
+-->
 </menu>

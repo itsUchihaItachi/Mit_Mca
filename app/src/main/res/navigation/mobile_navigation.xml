@@ -29,7 +29,7 @@
         android:label="@string/menu_tools"
         tools:layout="@layout/fragment_tools" />
 
-    <fragment
+<!--    <fragment
         android:id="@+id/nav_share"
         android:name="com.example.mitmca.ui.share.ShareFragment"
         android:label="@string/menu_share"
@@ -40,4 +40,6 @@
         android:name="com.example.mitmca.ui.send.SendFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_send" />
+-->
+
 </navigation>
