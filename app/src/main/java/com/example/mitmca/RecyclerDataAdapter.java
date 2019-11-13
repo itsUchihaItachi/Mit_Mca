@@ -1,7 +1,10 @@
 package com.example.mitmca;
 
+<<<<<<< HEAD
 import android.content.Intent;
 import android.util.Log;
+=======
+>>>>>>> 4565028... Main menu icons changed
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +14,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+<<<<<<< HEAD
 import com.example.mitmca.links.LinksHome;
 
+=======
+>>>>>>> 4565028... Main menu icons changed
 import java.util.ArrayList;
 
 public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapter.DataViewHolder>{
@@ -31,13 +37,18 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
     }
 
     @Override
+<<<<<<< HEAD
     public void onBindViewHolder(@NonNull DataViewHolder holder, final int position) {
+=======
+    public void onBindViewHolder(@NonNull DataViewHolder holder, int position) {
+>>>>>>> 4565028... Main menu icons changed
         DataItem dataItem = dataList.get(position);
         holder.imageView.setImageResource(dataItem.resId);
         holder.titleTextView.setText(dataItem.title);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
                 switch (position)
                 {
                     case 6:
@@ -47,6 +58,9 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
 
                 }
 
+=======
+                
+>>>>>>> 4565028... Main menu icons changed
             }
         });
     }
