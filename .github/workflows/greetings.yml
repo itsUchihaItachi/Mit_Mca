@@ -1,0 +1,13 @@
+name: Greetings
+
+on: [pull_request,push]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        push-message: 'Congo on first push dont be a show-off now'
+        pr-message: 'Your First Pull'
