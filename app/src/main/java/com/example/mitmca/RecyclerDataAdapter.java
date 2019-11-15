@@ -51,7 +51,7 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
 <<<<<<< HEAD
                 switch (position)
                 {
-                    case 6:
+                    case 8:
                         Intent intent = new Intent(v.getContext(), LinksHome.class);
                         v.getContext().startActivity(intent);
                         break;
