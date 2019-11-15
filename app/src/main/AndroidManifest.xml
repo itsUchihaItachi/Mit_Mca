@@ -23,7 +23,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".links.LinksHome"/>
+<!--        <activity android:name=".news.NewsEvents"/>-->
+<!--        <activity android:name=".maps.Maps"/>-->
+<!--        <activity android:name=".calendar.Calendar"/>-->
+<!--        <activity android:name=".tt.Timetable"/>-->
+<!--        <activity android:name=".paper.QuestionPaper"/>-->
+<!--        <activity android:name=".contacts.Contact"/>-->
+<!--        <activity android:name=".attandance.Attandance"/>-->
+<!--        <activity android:name=".forums.Forums"/>-->
+<!--        <activity android:name=".links.LinksHome"/>-->
     </application>
 
 </manifest>

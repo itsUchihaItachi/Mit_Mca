@@ -40,6 +40,38 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
             public void onClick(View v) {
                 switch (position)
                 {
+                    case 0:
+                        Intent intent = new Intent(v.getContext(), LinksHome.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case 1:
+                        Intent intent = new Intent(v.getContext(), LinksHome.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case 2:
+                        Intent intent = new Intent(v.getContext(), LinksHome.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case 3:
+                        Intent intent = new Intent(v.getContext(), LinksHome.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case 4:
+                        Intent intent = new Intent(v.getContext(), LinksHome.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case 5:
+                        Intent intent = new Intent(v.getContext(), LinksHome.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case 6:
+                        Intent intent = new Intent(v.getContext(), LinksHome.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case 7:
+                        Intent intent = new Intent(v.getContext(), LinksHome.class);
+                        v.getContext().startActivity(intent);
+                        break;
                     case 8:
                         Intent intent = new Intent(v.getContext(), LinksHome.class);
                         v.getContext().startActivity(intent);
