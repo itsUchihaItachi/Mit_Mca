@@ -9,29 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".tt.TTMainActivity"></activity>
+        <activity android:name=".paper.PaperMainActivity" />
+        <activity android:name=".news.NewsMainActivity" />
+        <activity android:name=".forums.ForumsMainActivity" />
+        <activity android:name=".contacts.ContactMainActivity" />
+        <activity android:name=".calendar.CalendarMainActivity" />
+        <activity android:name=".attandance.AttandanceMainActivity" />
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<!--        <activity android:name=".news.NewsEvents"/>-->
-<!--        <activity android:name=".maps.Maps"/>-->
-<!--        <activity android:name=".calendar.Calendar"/>-->
-<!--        <activity android:name=".tt.Timetable"/>-->
-<!--        <activity android:name=".paper.QuestionPaper"/>-->
-<!--        <activity android:name=".contacts.Contact"/>-->
-<!--        <activity android:name=".attandance.Attandance"/>-->
-<!--        <activity android:name=".forums.Forums"/>-->
-<!--        <activity android:name=".links.LinksHome"/>-->
     </application>
 
 </manifest>

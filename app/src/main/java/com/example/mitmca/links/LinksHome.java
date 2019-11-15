@@ -1,5 +1,6 @@
 package com.example.mitmca.links;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,11 +16,18 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mitmca.R;
+import com.example.mitmca.paper.PaperMainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class LinksHome extends AppCompatActivity {
+
+    public static void start(Context context){
+        Intent i=new Intent(context, LinksHome.class);
+        context.startActivity(i);
+    }
+
 
     private List<linkList> availList = new ArrayList<linkList>();
 
