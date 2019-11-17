@@ -1,7 +1,5 @@
 package com.example.mitmca;
 
-import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -115,8 +113,8 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
     }
 
     public class DataViewHolder extends RecyclerView.ViewHolder {
-        TextView titleTextView;
-        ImageView imageView;
+        public TextView titleTextView;
+        public ImageView imageView;
         public DataViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.image_view);

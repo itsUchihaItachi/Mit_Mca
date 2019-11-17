@@ -16,6 +16,7 @@
         <activity android:name=".contacts.ContactMainActivity" />
         <activity android:name=".calendar.CalendarMainActivity" />
         <activity android:name=".attandance.AttandanceMainActivity" />
+        <activity android:name=".links.LinksHome" />
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
