@@ -24,7 +24,8 @@ import java.util.List;
 public class LinksHome extends AppCompatActivity {
 
     public static void start(Context context){
-        Intent i=new Intent(context, LinksHome.class);
+
+        Intent i=new Intent(context,LinksHome.class);
         context.startActivity(i);
     }
 

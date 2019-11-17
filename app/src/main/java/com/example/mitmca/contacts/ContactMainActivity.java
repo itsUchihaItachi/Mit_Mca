@@ -40,7 +40,7 @@ public class ContactMainActivity extends AppCompatActivity {
         RecyclerView rv = findViewById(R.id.contact_recycler_view);
         ContactRecyclerDataAdapter adapter = new ContactRecyclerDataAdapter(dataList);
         rv.setAdapter(adapter);
-        rv.setLayoutManager(new LinearLayoutManager());
+        rv.setLayoutManager(new LinearLayoutManager(this));
     }
 
 }
