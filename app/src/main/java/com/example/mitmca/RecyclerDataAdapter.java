@@ -1,7 +1,5 @@
 package com.example.mitmca;
 
-import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mitmca.attandance.AttandanceMainActivity;
+import com.example.mitmca.attandance.MainActivity;
+import com.example.mitmca.attandance.QrScan;
 import com.example.mitmca.calendar.CalendarMainActivity;
 import com.example.mitmca.contacts.ContactMainActivity;
 import com.example.mitmca.forums.ForumsMainActivity;
@@ -87,8 +86,7 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
                     case 6:
                         //Intent intent = new Intent(v.getContext(), AttandanceMainActivity.class);
                         //v.getContext().startActivity(intent);
-
-                        AttandanceMainActivity.start(v.getContext());
+                        QrScan.start(v.getContext());
                         break;
                     case 7:
                         //Intent intent = new Intent(v.getContext(), ForumsMainActivity.class);

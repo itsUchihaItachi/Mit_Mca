@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mitmca">
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.hardware.camera.autofocus" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,13 +16,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".tt.TTMainActivity"></activity>
+        <activity android:name=".tt.TTMainActivity" />
         <activity android:name=".paper.PaperMainActivity" />
         <activity android:name=".news.NewsMainActivity" />
         <activity android:name=".forums.ForumsMainActivity" />
         <activity android:name=".contacts.ContactMainActivity" />
         <activity android:name=".calendar.CalendarMainActivity" />
-        <activity android:name=".attandance.AttandanceMainActivity" />
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
@@ -26,10 +32,22 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".attandance.MainActivity">
+            <intent-filter>
+                <data
+                    android:host="com.example.mitmca"
+                    android:scheme="launch" />
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".attandance.LoadingFirebase" />
+        <activity android:name=".attandance.QrScan"/>
     </application>
 
 </manifest>
