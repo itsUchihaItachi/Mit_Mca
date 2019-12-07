@@ -1,7 +1,7 @@
 package com.example.mitmca.contacts;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -9,9 +9,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.mitmca.DataItem;
+
 import com.example.mitmca.R;
-import com.example.mitmca.paper.PaperMainActivity;
+
 
 import java.util.ArrayList;
 

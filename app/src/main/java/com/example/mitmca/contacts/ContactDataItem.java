@@ -1,8 +1,8 @@
 package com.example.mitmca.contacts;
 
 public class ContactDataItem {
-    public int resId = 0;
-    public String title = "";
+    public static int resId = 0;
+    public static String title = "";
 
     public ContactDataItem(int resId, String title) {
         this.resId = resId;

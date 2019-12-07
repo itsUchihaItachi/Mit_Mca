@@ -31,8 +31,8 @@ public class ContactRecyclerDataAdapter extends RecyclerView.Adapter<ContactRecy
     @Override
     public void onBindViewHolder(@NonNull DataViewHolder holder,final int position) {
         ContactDataItem dataItem = dataList.get(position);
-        holder.imageView.setImageResource(dataItem.resId);
-        holder.titleTextView.setText(dataItem.title);
+        holder.imageView.setImageResource(ContactDataItem.resId);
+        holder.titleTextView.setText(ContactDataItem.title);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
