@@ -2,6 +2,8 @@ package com.example.mapapp;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -9,6 +11,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -40,10 +43,29 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
         float zoomLevel = 18.0f; //This goes up to 21
         // Add a marker in MIT and move the camera
-        LatLng mit = new LatLng(18.5178, 73.8149);
-        mMap.addMarker(new MarkerOptions().position(mit).title("Marker in MIT"));
+        LatLng mit = new LatLng(18.515983, 73.8129008);
+        final Marker m = mMap.addMarker(new MarkerOptions().position(mit).title("Marker in MIT"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(mit));
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mit, zoomLevel));
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                if (marker.equals(m)) {
+                    openMapsOnCLick();
+                }
+                return true;
+            }
+        });
+
+    }
+
+    private void openMapsOnCLick() {
+        Uri gmmIntentUri = Uri.parse("geo:18.515983,73.8129008");
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        if (mapIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(mapIntent);
+        }
     }
 }
