@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WorldCup2k19</string>
+    <string name="counter">Time Left</string>
+    <string name="countleft">till WORLDCUP 2k19!</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="seconds">Seconds</string>
+    <string name="worldcup_2k19">WORLDCUP 2k19!!</string>
+    <string name="days">Days</string>
+</resources>
