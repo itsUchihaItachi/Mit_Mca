@@ -6,9 +6,5 @@
     android:layout_height="match_parent"
     tools:context=".paper.PaperMainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="melroy"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
