@@ -57,6 +57,8 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
                         //v.getContext().startActivity(intent);
 
                         //LinksHome.start(v.getContext());
+
+                        MapsActivity.start(v.getContext());
                         break;
                     case 2:
                         //Intent intent = new Intent(v.getContext(), CalendarMainActivity.class);

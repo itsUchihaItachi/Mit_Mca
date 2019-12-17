@@ -19,8 +19,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table user(email text primary key,password text)");
         ContentValues cv=new ContentValues();
-        String e="swap";
-        String p="swap";
+        String e="mit";
+        String p="123";
         cv.put("email",e);
         cv.put("pass",p);
         long ins=db.insert("user",null,cv);
@@ -38,8 +38,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     {
         SQLiteDatabase db=getWritableDatabase();
         ContentValues cv=new ContentValues();
-        String e="swap";
-        String p="swap";
+        String e="mit";
+        String p="123";
         cv.put("email",e);
         cv.put("password",p);
         long ins=db.insert("user",null,cv);
