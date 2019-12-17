@@ -9,9 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mitmca.attandance.MainActivity;
 import com.example.mitmca.attandance.QrScan;
-import com.example.mitmca.calendar.CalendarMainActivity;
+import com.example.mitmca.calendar.ShowEvent;
 import com.example.mitmca.contacts.ContactMainActivity;
 import com.example.mitmca.forums.ForumsMainActivity;
 import com.example.mitmca.links.LinksHome;
@@ -63,7 +62,7 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
                         //Intent intent = new Intent(v.getContext(), CalendarMainActivity.class);
                         //v.getContext().startActivity(intent);
 
-                        CalendarMainActivity.start(v.getContext());
+                        ShowEvent.start(v.getContext());
                         break;
                     case 3:
                        // Intent intent = new Intent(v.getContext(), TTMainActivity.class);

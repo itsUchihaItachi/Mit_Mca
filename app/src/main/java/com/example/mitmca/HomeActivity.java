@@ -73,7 +73,7 @@ public class HomeActivity extends AppCompatActivity {
         RecyclerView rv = findViewById(R.id.recycler_view);
         RecyclerDataAdapter adapter = new RecyclerDataAdapter(dataList);
         rv.setAdapter(adapter);
-        rv.setLayoutManager(new GridLayoutManager(this, 2));
+        rv.setLayoutManager(new GridLayoutManager(this, 3));
     }
 
  /*   @Override

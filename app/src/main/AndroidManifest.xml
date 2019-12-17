@@ -16,12 +16,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".calendar.ShowEvent"/>
         <activity android:name=".tt.TTMainActivity" />
         <activity android:name=".paper.PaperMainActivity" />
         <activity android:name=".news.NewsMainActivity" />
         <activity android:name=".forums.ForumsMainActivity" />
         <activity android:name=".contacts.ContactMainActivity" />
-        <activity android:name=".calendar.CalendarMainActivity" />
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
@@ -48,6 +48,7 @@
         </activity>
         <activity android:name=".attandance.LoadingFirebase" />
         <activity android:name=".attandance.QrScan"/>
+        <activity android:name=".calendar.ShowEventsDb"/>
     </application>
 
 </manifest>
