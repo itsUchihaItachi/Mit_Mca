@@ -61,11 +61,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void openMapsOnCLick() {
-        Uri gmmIntentUri = Uri.parse("geo:18.515983,73.8129008");
+//        Uri gmmIntentUri = Uri.parse("geo:18.515983,73.8129008");
+//        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+//        mapIntent.setPackage("com.google.android.apps.maps");
+//        if (mapIntent.resolveActivity(getPackageManager()) != null) {
+//            startActivity(mapIntent);
+        Uri gmmIntentUri = Uri.parse("google.navigation:q=MIT+College,+Pune+Maharashtra");
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
         mapIntent.setPackage("com.google.android.apps.maps");
-        if (mapIntent.resolveActivity(getPackageManager()) != null) {
-            startActivity(mapIntent);
+        startActivity(mapIntent);
         }
     }
-}
+
