@@ -12,10 +12,16 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.mitmca.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_news"
+        android:name="com.example.mitmca.fragments.NewsFragment"
+        android:label="News"
+        tools:layout="@layout/activity_news_main" />
+
+    <fragment
+        android:id="@+id/nav_qr"
+        android:name="com.example.mitmca.fragments.AttendanceFragment"
+        android:label="Attendance"
+        tools:layout="@layout/activity_main" />
 
     <fragment
         android:id="@+id/nav_slideshow"
