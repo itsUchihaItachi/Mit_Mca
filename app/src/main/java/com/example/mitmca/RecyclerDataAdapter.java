@@ -10,11 +10,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mitmca.attandance.QrScan;
-import com.example.mitmca.calendar.ShowEvent;
+import com.example.mitmca.news.ShowEvent;
 import com.example.mitmca.contacts.ContactMainActivity;
 import com.example.mitmca.forums.ForumsMainActivity;
 import com.example.mitmca.links.LinksHome;
-import com.example.mitmca.news.NewsMainActivity;
 import com.example.mitmca.paper.PaperMainActivity;
 import com.example.mitmca.tt.TTMainActivity;
 
@@ -50,7 +49,7 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
                         //Intent intent = new Intent(v.getContext(), newsMainActivity.class);
                         //v.getContext().startActivity(intent);
 
-                        NewsMainActivity.start(v.getContext());
+                        ShowEvent.start(v.getContext());
                         break;
                     case 1:
                         //Intent intent = new Intent(v.getContext(), LinksHome.class);
@@ -64,7 +63,7 @@ public class RecyclerDataAdapter extends RecyclerView.Adapter<RecyclerDataAdapte
                         //Intent intent = new Intent(v.getContext(), CalendarMainActivity.class);
                         //v.getContext().startActivity(intent);
 
-                        ShowEvent.start(v.getContext());
+                        //ShowEvent.start(v.getContext());
                         break;
                     case 3:
                        // Intent intent = new Intent(v.getContext(), TTMainActivity.class);

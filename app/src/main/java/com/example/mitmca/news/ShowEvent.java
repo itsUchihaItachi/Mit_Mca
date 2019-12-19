@@ -1,4 +1,4 @@
-package com.example.mitmca.calendar;
+package com.example.mitmca.news;
 
 import android.content.Context;
 import android.content.Intent;
