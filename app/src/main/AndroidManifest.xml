@@ -16,7 +16,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".news.ShowEvent"/>
+        <activity android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".news.ShowEvent" />
         <activity android:name=".tt.TTMainActivity" />
         <activity android:name=".paper.PaperMainActivity" />
         <activity android:name=".forums.ForumsMainActivity" />
@@ -31,7 +38,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".attandance.MainActivity">
@@ -39,16 +46,20 @@
                 <data
                     android:host="com.example.mitmca"
                     android:scheme="launch" />
-                <action android:name="android.intent.action.VIEW"/>
+
+                <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".attandance.LoadingFirebase" />
-        <activity android:name=".attandance.QrScan"/>
-        <activity android:name=".news.ShowEventsDb"/>
-        <activity android:name=".links.LinksHome"/>
+        <activity android:name=".attandance.QrScan" />
+        <activity android:name=".news.ShowEventsDb" />
+        <activity android:name=".links.LinksHome" />
     </application>
 
 </manifest>

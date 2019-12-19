@@ -73,10 +73,10 @@ public class HomeActivity extends AppCompatActivity {
         dataList.add(new DataItem(R.drawable.news, "News/Events"));
         dataList.add(new DataItem(R.drawable.maps, "Map"));
         dataList.add(new DataItem(R.drawable.calendar, "Calendar"));
-        dataList.add(new DataItem(R.drawable.timetable, "TimeTable"));
+        dataList.add(new DataItem(R.drawable.timetable, "Time Table"));
         dataList.add(new DataItem(R.drawable.questionpaper, "Question Paper"));
         dataList.add(new DataItem(R.drawable.contact, "Contact"));
-        dataList.add(new DataItem(R.drawable.qr, "QR"));
+        dataList.add(new DataItem(R.drawable.qr, "Attendance"));
         dataList.add(new DataItem(R.drawable.forum, "Forum"));
         dataList.add(new DataItem(R.drawable.links, "Links"));
 
