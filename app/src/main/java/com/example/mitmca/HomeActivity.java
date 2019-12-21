@@ -70,15 +70,15 @@ public class HomeActivity extends AppCompatActivity {
 
     private void setupRecyclerView(){
         ArrayList<DataItem> dataList = new ArrayList<>();
-        dataList.add(new DataItem(R.drawable.event1, "News/Events"));
-        dataList.add(new DataItem(R.drawable.maps1, "Map"));
-        dataList.add(new DataItem(R.drawable.calendar1, "Calendar"));
-        dataList.add(new DataItem(R.drawable.timetable1, "Time Table"));
-        dataList.add(new DataItem(R.drawable.papes1, "Question Paper"));
-        dataList.add(new DataItem(R.drawable.contact1, "Contact"));
-        dataList.add(new DataItem(R.drawable.attendance1, "Attendance"));
-        dataList.add(new DataItem(R.drawable.forum1, "Forum"));
-        dataList.add(new DataItem(R.drawable.links1, "Links"));
+        dataList.add(new DataItem(R.drawable.news, "News/Events"));
+        dataList.add(new DataItem(R.drawable.maps, "Map"));
+        dataList.add(new DataItem(R.drawable.calendar, "Calendar"));
+        dataList.add(new DataItem(R.drawable.timetable, "Time Table"));
+        dataList.add(new DataItem(R.drawable.questionpaper, "Question Paper"));
+        dataList.add(new DataItem(R.drawable.contact, "Contact"));
+        dataList.add(new DataItem(R.drawable.qr, "Attendance"));
+        dataList.add(new DataItem(R.drawable.forum, "Forum"));
+        dataList.add(new DataItem(R.drawable.links, "Links"));
 
         RecyclerView rv = findViewById(R.id.recycler_view);
         RecyclerDataAdapter adapter = new RecyclerDataAdapter(dataList);
