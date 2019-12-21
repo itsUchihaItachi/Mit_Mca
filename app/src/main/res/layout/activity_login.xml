@@ -4,19 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
-    //android:background="@drawable/login_screen"
-
-
-    /*
-        First screen
-    */
+    tools:context=".LoginActivity"
+    android:background="@drawable/side_nav_bar">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="132dp"
-        android:src="@drawable/mit_logo"
+        android:src="@drawable/mitlogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,16 +26,17 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.483">
 
         <TextView
+            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/login"
-            android:textSize="24sp"
-            style="@style/TextAppearance.AppCompat.Title"/>
-
+            android:textSize="24sp" />
 
 
         <EditText
@@ -56,10 +52,10 @@
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="password"
-
             android:layout_marginTop="12dp"
+            android:ems="10"
+
+            android:hint="password"
             android:inputType="textPassword"
             android:textSize="20sp" />
 
@@ -67,9 +63,9 @@
             android:id="@+id/floatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
             android:layout_gravity="end"
             android:layout_margin="4dp"
+            android:layout_marginTop="12dp"
             android:clickable="true"
             android:src="@drawable/ic_arrow_forward_black_24dp" />
 

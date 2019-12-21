@@ -36,6 +36,14 @@
             android:id="@+id/nav_links"
             android:icon="@drawable/links"
             android:title="@string/menu_links" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/links"
+            android:title="@string/menu_settings" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/links"
+            android:title="@string/menu_logut" />
     </group>
 
   <!--  <item android:title="Communicate">
