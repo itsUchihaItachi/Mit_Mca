@@ -5,18 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
-    //android:background="@drawable/login_screen"
-
-
-    /*
-        First screen
-    */
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="132dp"
-        android:src="@drawable/mit_logo"
+        android:src="@drawable/mitlogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
