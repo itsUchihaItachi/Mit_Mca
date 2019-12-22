@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mitmca.attandance.QrScan;
+import com.example.mitmca.maps.MapsActivity;
 import com.example.mitmca.news.ShowEvent;
 import com.example.mitmca.contacts.ContactMainActivity;
 import com.example.mitmca.forums.ForumsMainActivity;

@@ -28,6 +28,7 @@
         <activity android:name=".paper.PaperMainActivity" />
         <activity android:name=".forums.ForumsMainActivity" />
         <activity android:name=".contacts.ContactMainActivity" />
+        <activity android:name=".maps.MapsActivity"/>
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
