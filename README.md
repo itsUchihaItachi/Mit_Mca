@@ -1,2 +1,3 @@
 # Mit_Mca
 things you never thought of .... are coming soon...
+QR- LINKS- MENTIONED IN THE MANIFEST WHATARE REQUIRED BY me
