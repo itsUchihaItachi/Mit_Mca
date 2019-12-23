@@ -1,6 +1,7 @@
 package com.example.mitmca;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -45,9 +46,13 @@ public class HomeActivity extends AppCompatActivity {
                 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 //                        .setAction("Action", null).show();
 
-                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+//                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                        "mailto","raviagrawal1012@gmail.com", null));
+//                emailIntent.putExtra(Intent.EXTRA_EMAIL, "raviagrawal1012@gmail.com");
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
                 emailIntent.setType("text/plain");
-                startActivity(emailIntent);
+                startActivity(Intent.createChooser(emailIntent, "Send email..."));
             }
         });
 
