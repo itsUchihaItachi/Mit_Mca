@@ -7,7 +7,9 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -25,16 +27,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class HomeActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-
+   public TextView nav_head_name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        nav_head_name = findViewById(R.id.header_name);
+        String setEname = getIntent().getStringExtra("ename");
+        Log.d("ENAME", setEname);
+
+       // nav_head_name.setText(Objects.requireNonNull(setEname));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -57,22 +64,24 @@ public class HomeActivity extends AppCompatActivity {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setItemIconTintList(null);
+
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
-               // , R.id.nav_tools, R.id.nav_share, R.id.nav_send
+                // , R.id.nav_tools, R.id.nav_share, R.id.nav_send
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-
         setupRecyclerView();
+
     }
 
-    private void setupRecyclerView(){
+    private void setupRecyclerView() {
         ArrayList<DataItem> dataList = new ArrayList<>();
         dataList.add(new DataItem(R.drawable.event1, "News/Events"));
         dataList.add(new DataItem(R.drawable.maps1, "Map"));
@@ -88,6 +97,7 @@ public class HomeActivity extends AppCompatActivity {
         RecyclerDataAdapter adapter = new RecyclerDataAdapter(dataList);
         rv.setAdapter(adapter);
         rv.setLayoutManager(new GridLayoutManager(this, 3));
+
     }
 
  /*   @Override
@@ -103,4 +113,5 @@ public class HomeActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 }

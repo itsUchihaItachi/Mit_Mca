@@ -2,6 +2,7 @@ package com.example.mitmca;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -35,6 +36,8 @@ public class LoginActivity extends AppCompatActivity {
                 if (checkEmailPass == true) {
                     Toast.makeText(getApplicationContext(), "Successful login", Toast.LENGTH_SHORT).show();
                     Intent intent= new Intent(v.getContext(),HomeActivity.class);
+                    intent.putExtra("ename",email);
+                    Log.d("Email",email);
                     startActivity(intent);
                 }
                 else {
