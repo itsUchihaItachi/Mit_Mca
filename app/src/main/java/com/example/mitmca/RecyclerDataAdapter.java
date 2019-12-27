@@ -10,8 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mitmca.attandance.QrScan;
-import com.example.mitmca.news.ShowEvent;
 import com.example.mitmca.contacts.ContactMainActivity;
+import com.example.mitmca.news.ShowEvent;
 import com.example.mitmca.forums.ForumsMainActivity;
 import com.example.mitmca.links.LinksHome;
 import com.example.mitmca.paper.PaperMainActivity;
