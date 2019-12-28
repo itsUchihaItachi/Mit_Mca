@@ -22,7 +22,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
 
     public static void start(Context context){
-        Intent i=new Intent(context, PaperMainActivity.class);
+        Intent i=new Intent(context, MapsActivity.class);
         context.startActivity(i);
     }
 

@@ -30,6 +30,10 @@
         <activity android:name=".tt.TTMainActivity" />
         <activity android:name=".paper.PaperMainActivity" />
         <activity android:name=".forums.ForumsMainActivity" />
+        <activity android:name=".MapsActivity"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCGxnylKSgwj2y35Y5d0_fZARhbO4qKBII" />
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
