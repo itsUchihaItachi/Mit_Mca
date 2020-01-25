@@ -12,8 +12,11 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mitmca.R;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,8 +28,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShowEvent extends AppCompatActivity {
-    public static void start(Context context){
-        Intent i=new Intent(context, ShowEvent.class);
+
+    PostAdapter postAdapter;
+
+    public static void start(Context context) {
+        Intent i = new Intent(context, ShowEvent.class);
         context.startActivity(i);
     }
 
@@ -36,7 +42,7 @@ public class ShowEvent extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      setContentView(R.layout.activity_show_event);
+        setContentView(R.layout.activity_show_event);
         spinner = findViewById(R.id.spinner);
 
 
@@ -72,8 +78,10 @@ public class ShowEvent extends AppCompatActivity {
                 Log.d("POS", String.valueOf(position));
                 String text = spinner.getSelectedItem().toString();
                 Log.d("VOS", text);
-                Intent i = new Intent(getApplicationContext(), ShowEventsDb.class).putExtra("VOS", text);
-                startActivity(i);
+
+                setupRecyclerView(text);
+//                Intent i = new Intent(getApplicationContext(), ShowEventsDb.class).putExtra("VOS", text);
+//                startActivity(i);
             }
 
             @Override
@@ -82,4 +90,31 @@ public class ShowEvent extends AppCompatActivity {
             }
         });
     }
+
+
+    private void setupRecyclerView(String text) {
+//        String  a =  getIntent().getStringExtra("VOS");
+        Log.d("VAL", text);
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        FirebaseRecyclerOptions<Post> options = new FirebaseRecyclerOptions.Builder<Post>()
+                .setQuery(FirebaseDatabase.getInstance().getReference().child("Events").child(text), Post.class)
+                .build();
+
+        postAdapter = new PostAdapter(options);
+        postAdapter.startListening();
+        recyclerView.setAdapter(postAdapter);
+
+    }
+
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (postAdapter != null) {
+            postAdapter.stopListening();
+        }
+    }
+
 }
